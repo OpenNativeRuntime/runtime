@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.25)
 
 project(
     OpenNativeRuntime
-    VERSION 0.1.0
+    VERSION 0.0.1
     DESCRIPTION "A cross-platform native application runtime"
     LANGUAGES CXX
 )
@@ -18,8 +18,10 @@ option(ONR_BUILD_TESTS "Build OpenNativeRuntime tests" ON)
 option(ONR_ENABLE_WARNINGS "Enable additional compiler warnings" ON)
 
 add_library(onr_build_options INTERFACE)
-
 target_compile_features(onr_build_options INTERFACE cxx_std_20)
+
+add_executable(onr-runtime src/main.cpp)
+target_link_libraries(onr-runtime PRIVATE onr_build_options)
 
 if(ONR_ENABLE_WARNINGS)
     if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")

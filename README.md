@@ -8,6 +8,41 @@ The project aims to combine the flexibility of HTML, CSS, JavaScript, and framew
 
 > **Project status:** Early design and prototyping. The architecture and capabilities described below are goals, not claims about an already production-ready implementation.
 
+## Prerequisites
+
+- A C++20-compatible compiler.
+- CMake 3.25 or newer.
+- No GTK or WebKitGTK dependencies are required at this stage.
+
+## Build from Source
+
+Configure the project and generate the build files:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+```
+
+Build the runtime executable:
+
+```bash
+cmake --build build --parallel 2
+```
+
+Run the prototype:
+
+```bash
+./build/onr-runtime
+```
+
+Expected output:
+
+```text
+OpenNativeRuntime prototype
+```
+
+> **Current implementation status:** OpenNativeRuntime currently builds a minimal native C++ executable. Web rendering, native capabilities, process isolation, and other runtime features are planned and have not yet been implemented.
+
+
 ## Why OpenNativeRuntime?
 
 Electron makes it possible to build desktop applications with web technologies, but distributing a browser engine with each application can increase package size and resource requirements.
