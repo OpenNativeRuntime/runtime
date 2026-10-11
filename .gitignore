@@ -1,0 +1,79 @@
+
+# Build directories
+/build/
+/cmake-build-*/
+/out/
+/dist/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+!**/Makefile
+
+# Compiled binaries and libraries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.app/
+*.class
+
+# Debug symbols and profiling
+*.pdb
+*.ilk
+*.dSYM/
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+
+# Frontend dependencies and build artifacts
+node_modules/
+.npm/
+.pnpm-store/
+.vite/
+coverage/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# IDEs and editors
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Local runtime state
+.runtime-cache/
+.runtime-data/
+
+# Test artifacts
+test-results/
+playwright-report/
